@@ -10,13 +10,13 @@ describe(AppComponent.name, () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
+			declarations: [
+				AppComponent
+			],
 			imports: [
 				RouterTestingModule,
 				LikeWidgetModule,
 				PhotoFrameModule
-			],
-			declarations: [
-				AppComponent
 			],
 		}).compileComponents();
 	});

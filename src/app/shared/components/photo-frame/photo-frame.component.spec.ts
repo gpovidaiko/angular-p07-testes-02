@@ -16,8 +16,7 @@ describe(PhotoFrameComponent.name, () => {
 			imports: [
 				LikeWidgetModule
 			]
-		})
-			.compileComponents();
+		}).compileComponents();
 
 		fixture = TestBed.createComponent(PhotoFrameComponent);
 		component = fixture.componentInstance;

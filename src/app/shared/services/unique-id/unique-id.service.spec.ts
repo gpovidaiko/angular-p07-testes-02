@@ -6,14 +6,16 @@ describe(UniqueIdService.name, () => {
 	let service: UniqueIdService;
 
 	beforeEach(() => {
-	  TestBed.configureTestingModule({
-		providers: [UniqueIdService]
-	  });
-	  service = TestBed.inject(UniqueIdService);
+		TestBed.configureTestingModule({
+			providers: [
+				UniqueIdService
+			]
+		});
+		service = TestBed.inject(UniqueIdService);
 	});
 
 	it('should be created', () => {
-	  expect(service).toBeTruthy();
+		expect(service).toBeTruthy();
 	});
 
 	it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name} should generate id when called with prefix`, () => {
