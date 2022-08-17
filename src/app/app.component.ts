@@ -1,15 +1,19 @@
+import { PhotoBoardService } from './shared/components/photo-board/services/photo-board.service';
 import { Component } from '@angular/core';
+import { Photo } from './shared/components/photo-board/interfaces/photo.interface';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-p07-testes-02';
-  likes = 0;
+	title = 'angular-p07-testes-02';
+	public photos$: Observable<Photo[]>;
 
-  like(): void {
-	this.likes++;
-  }
+	constructor(private service: PhotoBoardService) {
+		this.photos$ = this.service.getPhotos();
+	}
+
 }

@@ -22,10 +22,13 @@ describe(ActionDirective.name, () => {
 		rootElement = fixture.nativeElement;
 	});
 
-	it('should create an instance', () => {
-		const directive = new ActionDirective();
-		expect(directive).toBeTruthy();
-	});
+	it(
+		'should create an instance',
+		() => {
+			const directive = new ActionDirective();
+			expect(directive).toBeTruthy();
+		}
+	);
 
 	it(
 		`<Template> (@Output appAction)
