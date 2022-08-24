@@ -10,10 +10,4 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
 	title = 'angular-p07-testes-02';
-	public photos$: Observable<Photo[]>;
-
-	constructor(private service: PhotoBoardService) {
-		this.photos$ = this.service.getPhotos();
-	}
-
 }

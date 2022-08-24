@@ -1,5 +1,6 @@
 import { Component, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { buildPhotoList } from '../../test/functions/build-photo-list.function';
 import { PhotoFrameModule } from '../photo-frame/photo-frame.module';
 import { Photo } from './interfaces/photo.interface';
 
@@ -74,18 +75,6 @@ describe(PhotoBoardComponent.name, () => {
 	);
 
 });
-
-function buildPhotoList(): Photo[] {
-	const photos: Photo[] = [];
-	for (let i = 0; i < 8; i++) {
-		photos.push({
-			id: i + 1,
-			url: '',
-			description: ''
-		});
-	}
-	return photos;
-}
 
 @Component({
 	template: `<app-photo-board [photos]="photos"></app-photo-board>`

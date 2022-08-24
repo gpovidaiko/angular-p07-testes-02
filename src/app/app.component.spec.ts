@@ -1,10 +1,6 @@
-import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { LikeWidgetModule } from './shared/components/like-widget/like-widget.module';
-import { PhotoBoardModule } from './shared/components/photo-board/photo-board.module';
-import { PhotoFrameModule } from './shared/components/photo-frame/photo-frame.module';
 
 describe(AppComponent.name, () => {
 	let app: AppComponent;
@@ -16,11 +12,7 @@ describe(AppComponent.name, () => {
 				AppComponent
 			],
 			imports: [
-				RouterTestingModule,
-				HttpClientModule,
-				LikeWidgetModule,
-				PhotoFrameModule,
-				PhotoBoardModule
+				RouterTestingModule
 			],
 		}).compileComponents();
 	});
